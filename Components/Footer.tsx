@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { facebook, instagram, linkedin, twitter } from "@/public/images";
+import { facebook, instagram, linkedin, twitter } from "@/public";
 
 const Footer = () => {
   return (

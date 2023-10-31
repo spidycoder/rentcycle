@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Image from "next/image";
 import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
-import { mainPage1, mainPage2, mainPage3 } from "@/public/images";
+import { mainPage1, mainPage2, mainPage3 } from "@/public";
 
 const locations = [
   {

@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Fade } from "react-reveal";
-import {mainPage1, mainPage2, mainPage3 } from "@/public/images";
+import {mainPage1, mainPage2, mainPage3 } from "@/public";
 import Image from "next/image";
 
 const images = [mainPage1,mainPage2, mainPage3];

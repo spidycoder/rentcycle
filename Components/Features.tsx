@@ -7,7 +7,7 @@ import {
   safeRide,
   smartMobility,
   station,
-} from "@/public/images";
+} from "@/public";
 
 const Features = () => {
   return (

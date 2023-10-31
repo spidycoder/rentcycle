@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import {logo} from "../public/images/index"
+import {logo} from "../public"
 const Header = () => {
   return (
     <div className="flex flex-row justify-evenly mt-4 z-10 bg-transparent fixed top-0 left-0 w-full">

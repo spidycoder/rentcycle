@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { top1, top2, top3, top4, top5 } from "@/public/images";
+import { top1, top2, top3, top4, top5 } from "@/public";
 
 const TopCycles = () => {
   return (
@@ -10,7 +10,7 @@ const TopCycles = () => {
           Popular Cycles for Rent:
         </h1>
       </div>
-      <div className="flex flex-row justify-evenly">
+      <div className="flex flex-row justify-evenly gap-3 pl-2 pr-2">
         <div className="relative h-64 w-64 border-slate-200 rounded-md shadow-xl group">
           <Image
             src={top1}
