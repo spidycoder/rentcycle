@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Fade } from "react-reveal";
-import {mainPage1, mainPage2, mainPage3 } from "@/public";
+import Fade from 'react-reveal/Fade';
+import { mainPage1, mainPage2, mainPage3 } from "@/public";
 import Image from "next/image";
 
-const images = [mainPage1,mainPage2, mainPage3];
+const images = [mainPage1, mainPage2, mainPage3];
 const text: [string, string][] = [
   ["Self Ride Bike Rentals", "Now Start at ₹10/hour"],
   ["Long term Rentals", "Choose from monthly and annual plan"],

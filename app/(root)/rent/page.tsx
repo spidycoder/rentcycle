@@ -39,7 +39,11 @@ const page = () => {
                   {cycle.name}
                 </h1>
                 <div className="flex flex-row justify-center items-center gap-2 mt-2">
-                  <h1>{cycle.rent}</h1>
+                  <div className="flex flex-row">
+                    <h1 className="inline">₹</h1>
+                    <h1>{cycle.rent}</h1>
+                    <h1 className="inline">/hour</h1>
+                  </div>
                   <Link
                     href={{
                       pathname: "/rent/booknow",
@@ -91,8 +95,21 @@ const page = () => {
                   {cycle.name}
                 </h1>
                 <div className="flex flex-row justify-center items-center gap-2 mt-2">
-                  <h1>{cycle.rent}</h1>
-                  <Link href="/rent/booknow">
+                  <div className="flex flex-row">
+                    <h1 className="inline">₹</h1>
+                    <h1>{cycle.rent}</h1>
+                    <h1 className="inline">/hour</h1>
+                  </div>
+                  <Link
+                    href={{
+                      pathname: "/rent/booknow",
+                      query: {
+                        name: cycle.name,
+                        image: cycle.image,
+                        price: cycle.rent,
+                      },
+                    }}
+                  >
                     <button
                       type="submit"
                       className="bg-blue-900 text-white px-3 py-1"
@@ -133,8 +150,21 @@ const page = () => {
                   {cycle.name}
                 </h1>
                 <div className="flex flex-row justify-center items-center gap-2 mt-2">
-                  <h1>{cycle.rent}</h1>
-                  <Link href="/rent/booknow">
+                  <div className="flex flex-row">
+                    <h1 className="inline">₹</h1>
+                    <h1>{cycle.rent}</h1>
+                    <h1 className="inline">/hour</h1>
+                  </div>
+                  <Link
+                    href={{
+                      pathname: "/rent/booknow",
+                      query: {
+                        name: cycle.name,
+                        image: cycle.image,
+                        price: cycle.rent,
+                      },
+                    }}
+                  >
                     <button
                       type="submit"
                       className="bg-blue-900 text-white px-3 py-1"
