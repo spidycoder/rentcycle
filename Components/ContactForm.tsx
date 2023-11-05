@@ -2,6 +2,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Image from "next/image";
+import { Fade } from "react-awesome-reveal";
 import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
 import { mainPage1, mainPage2, mainPage3 } from "@/public";
@@ -63,13 +64,13 @@ export default function ContactForm() {
         </p>
       </div>
       <div className="flex flex-row justify-evenly">
-        <div className="relative mt-16 h-64 w-64 lg:h-72 lg:w-72 border-2 rounded-md shadow-md shadow-slate-400 mb-4 lg:mb-0">
-          <Image
-            src={images[currentIndex]}
-            alt="cycle-images"
-            className="object-cover h-64 w-64 lg:h-72 lg:w-72"
-          />
-        </div>
+          <div className="relative mt-16 h-64 w-64 lg:h-72 lg:w-72 border-2 rounded-md shadow-md shadow-slate-400 mb-4 lg:mb-0">
+            <Image
+              src={images[currentIndex]}
+              alt="cycle-images"
+              className="object-cover h-64 w-64 lg:h-72 lg:w-72"
+            />
+          </div>
         <Box
           component="form"
           sx={{

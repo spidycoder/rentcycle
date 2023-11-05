@@ -64,7 +64,7 @@ const page = ({
           </Link>
         </div>
         <div>
-          <Link href="/rent/booknow/pay/payment">
+          <Link href={{pathname:"/rent/booknow/pay/payment",query:{value:value}}}>
             <Button variant="contained">Pay Now</Button>
           </Link>
         </div>

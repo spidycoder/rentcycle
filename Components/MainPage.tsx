@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Fade from 'react-reveal/Fade';
+import {Fade} from 'react-awesome-reveal';
 import { mainPage1, mainPage2, mainPage3 } from "@/public";
 import Image from "next/image";
 
@@ -27,7 +27,6 @@ const MainPage = () => {
 
   return (
     <div>
-      <Fade>
         <div className="relative h-screen w-screen">
           <Image
             src={images[currentIndex]}
@@ -43,7 +42,6 @@ const MainPage = () => {
             </p>
           </div>
         </div>
-      </Fade>
     </div>
   );
 };

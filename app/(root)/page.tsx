@@ -1,3 +1,4 @@
+"use client"
 import ContactForm from "@/Components/ContactForm";
 import FAQs from "@/Components/FAQs";
 import Features from "@/Components/Features";
