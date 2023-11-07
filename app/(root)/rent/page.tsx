@@ -4,7 +4,7 @@ import { first, second, third } from "../../../Constants";
 
 const page = () => {
   return (
-    <div className="mb-12">
+    <div className="mt-20 mb-12">
       <div className=" mt-8 flex flex-row justify-center items-center">
         <h1 className=" font-black hover:text-amber-800 text-3xl hover:shadow-sm">
           Book Your Cycle

@@ -15,7 +15,7 @@ const page = ({
 }) => {
   const value = searchParams.totalTime * searchParams.price;
   return (
-    <div>
+    <div className="mt-20">
       <h1 className="mt-12 mb-8 font-bold text-4xl flex justify-center items-center">
         Your Booking Details
       </h1>

@@ -1,36 +1,80 @@
 import type { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
+import { connectDB } from "@/lib/mongoose";
+import User from "../../../../lib/models/user.model";
+import { Account, User as AuthUser } from "next-auth";
+import bcrypt from "bcryptjs";
+import { NextResponse } from "next/server";
 
 export const options: NextAuthOptions = {
   providers: [
     GoogleProvider({
-        clientId: process.env.GOOGLE_ID as string,
-        clientSecret: process.env.GOOGLE_SECRET as string,
+      clientId: process.env.GOOGLE_ID as string,
+      clientSecret: process.env.GOOGLE_SECRET as string,
     }),
-    // CredentialsProvider({
-    //     name: "Credentials",
-    //     credentials: {
-    //         username: {
-    //             label:"Username",
-    //             type:"text",
-    //             placeholder:"Your Username"
-    //         },
-    //         password:{
-    //             label:"Password",
-    //             type:"password",
-    //             placeholder:"password"
-    //         }
-    //     },
-    //     async authorize(credentials){
-    //         //to do:-(Import user from database and check for real users)
-    //         const user = {id:"21",name:"Aditya",password:"Kunal!767718"}
-    //         if(credentials?.username === user.name && credentials?.password === user.password){
-    //             return user;
-    //         }else{
-    //             return null;
-    //         }
-    //     }
-    // })
+    CredentialsProvider({
+      id: "credentials",
+      name: "Credentials",
+      credentials: {
+        email: {
+          label: "email",
+          type: "text",
+          placeholder: "Your Email",
+        },
+        password: {
+          label: "Password",
+          type: "password",
+          placeholder: "password",
+        },
+      },
+      async authorize(credentials: any) {
+        await connectDB();
+        try {
+          const existingUser = await User.findOne({ email: credentials.email });
+          if (existingUser) {
+            const isPasswordCorrect = await bcrypt.compare(
+              credentials.password,
+              existingUser.password
+            );
+            if (isPasswordCorrect) {
+              return existingUser;
+            } else {
+              return new NextResponse("User is not registered", {
+                status: 400,
+              });
+            }
+          }
+        } catch (error: any) {
+          console.error("Error in authorization:", error);
+          throw new Error("An error occurred during authorization");
+        }
+      },
+    }),
   ],
+  callbacks: {
+    async signIn({ user, account }: { user: AuthUser; account: Account }) {
+      if (account?.provider == "credentials") {
+        return true;
+      }
+      if (account?.provider == "google") {
+        await connectDB();
+        try {
+          const existingUser = await User.findOne({ email: user.email });
+          if (!existingUser) {
+            const newUser = new User({
+              email: user.email,
+            });
+
+            await newUser.save();
+            return true;
+          }
+          return true;
+        } catch (err) {
+          console.log("Error saving user", err);
+          return false;
+        }
+      }
+    },
+  },
 };

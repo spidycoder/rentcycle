@@ -57,7 +57,7 @@ const page = ({
   const differenceInMinutes = endTime?.diff(startTime, "minute");
   const totalTime = differenceInMinutes ? (differenceInMinutes / 60).toFixed(2) : 0.00;
   return (
-    <div>
+    <div className="mt-20">
       <h1 className="flex justify-center items-center mt-12 font-bold hover:text-amber-800 text-3xl">
         Book Now
       </h1>
