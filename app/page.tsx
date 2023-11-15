@@ -1,10 +1,10 @@
 "use client";
-import ContactForm from "@/components/ContactForm";
-import FAQs from "@/components/FAQs";
-import Features from "@/components/Features";
-import Footer from "@/components/Footer";
-import MainPage from "@/components/MainPage";
-import TopCycles from "@/components/TopCycles";
+import ContactForm from "@/Components/ContactForm";
+import FAQs from "@/Components/FAQs";
+import Features from "@/Components/Features";
+import Footer from "@/Components/Footer";
+import MainPage from "@/Components/MainPage";
+import TopCycles from "@/Components/TopCycles";
 export default function Home() {
   return (
     <div>
