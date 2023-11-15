@@ -61,7 +61,7 @@ const page = ({
       <h1 className="flex justify-center items-center mt-12 font-bold hover:text-amber-800 text-3xl">
         Book Now
       </h1>
-      <div className="flex flex-row justify-evenly mt-10">
+      <div className="flex sm:flex-col-reverse sm:items-center sm:mb-6 flex-row justify-evenly mt-10">
         <div>
           <Box
             component="form"

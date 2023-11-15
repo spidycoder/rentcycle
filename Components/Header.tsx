@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { logo } from "../public";
-import SignIn from "./SignIn";
+// import SignIn from "./SignIn";
 import { signOut, useSession } from "next-auth/react";
 
 const Header = () => {
@@ -40,14 +40,14 @@ const Header = () => {
             SignIn
           </Link>
         ) : (
-          <>
+          <div>
             <button
               onClick={() => signOut()}
               className=" text-lg hover:text-amber-800 font-semibold"
             >
               LogOut
             </button>
-          </>
+          </div>
         )}
         {/* <Link
           href="/signin"

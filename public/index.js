@@ -1,6 +1,5 @@
 import logo from "./logo.jpg";
 import mainPage1 from "./mainPage1.jpg";
-import mainPage2 from "./mainPage2.jpg";
 import mainPage3 from "./mainPage3.jpg";
 import top1 from "./top1.jpg";
 import top2 from "./top2.jpg";
@@ -32,7 +31,6 @@ import cycle12 from "./cycle12.jpg";
 export {
   logo,
   mainPage1,
-  mainPage2,
   mainPage3,
   top1,
   top2,

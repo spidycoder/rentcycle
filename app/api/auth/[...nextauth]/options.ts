@@ -53,11 +53,15 @@ export const options: NextAuthOptions = {
     }),
   ],
   callbacks: {
-    async signIn({ user, account }: { user: AuthUser; account: Account }) {
-      if (account?.provider == "credentials") {
-        return true;
-      }
-      if (account?.provider == "google") {
+    async signIn({
+      user,
+      account,
+    }: {
+      user: AuthUser;
+      account: Account | null;
+    }) {
+      if (account?.provider === "credentials") return true;
+      if (account?.provider === "google") {
         await connectDB();
         try {
           const existingUser = await User.findOne({ email: user.email });
@@ -65,16 +69,16 @@ export const options: NextAuthOptions = {
             const newUser = new User({
               email: user.email,
             });
-
             await newUser.save();
             return true;
           }
           return true;
-        } catch (err) {
-          console.log("Error saving user", err);
+        } catch (error: any) {
+          console.log("Error saving user", error);
           return false;
         }
       }
+      return false;
     },
   },
 };

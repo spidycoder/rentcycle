@@ -16,10 +16,10 @@ const page = ({
   const value = searchParams.totalTime * searchParams.price;
   return (
     <div className="mt-20">
-      <h1 className="mt-12 mb-8 font-bold text-4xl flex justify-center items-center">
+      <h1 className="mt-12 sm:text-2xl mb-8 font-bold text-4xl flex justify-center items-center">
         Your Booking Details
       </h1>
-      <div className="mt-12 flex flex-row justify-evenly">
+      <div className="mt-12 sm:flex-col-reverse sm:items-center sm:gap-2 flex flex-row justify-evenly">
         <div>
           <div className="flex flex-row gap-1">
             <h1 className="font-bold">Name:</h1>
@@ -54,17 +54,18 @@ const page = ({
             alt="cycle"
             height={324}
             width={324}
+            className="sm:rounded-md"
           />
         </div>
       </div>
       <div className="mt-6 flex flex-row justify-evenly">
         <div>
-          <Link href="/rent/booknow">
-            <Button variant="contained">Change Your time</Button>
-          </Link>
-        </div>
-        <div>
-          <Link href={{pathname:"/rent/booknow/pay/payment",query:{value:value}}}>
+          <Link
+            href={{
+              pathname: "/rent/booknow/pay/payment",
+              query: { value: value },
+            }}
+          >
             <Button variant="contained">Pay Now</Button>
           </Link>
         </div>

@@ -5,14 +5,14 @@ import { first, second, third } from "../../../Constants";
 const page = () => {
   return (
     <div className="mt-20 mb-12">
-      <div className=" mt-8 flex flex-row justify-center items-center">
-        <h1 className=" font-black hover:text-amber-800 text-3xl hover:shadow-sm">
+      <div className="sm:items-center mt-8 flex flex-row justify-center items-center">
+        <h1 className="font-black hover:text-amber-800 text-3xl hover:shadow-sm">
           Book Your Cycle
         </h1>
       </div>
       {/* first row */}
-      <div className="mt-8 flex flex-col gap-2 mb-6">
-        <div className="flex flex-row justify-evenly">
+      <div className="mt-8 sm:flex-wrap sm:items-center flex flex-col gap-2 mb-6">
+        <div className="flex sm:flex-col  flex-row justify-evenly">
           {first.map((cycle) => (
             <div className="flex flex-col" key={cycle.name}>
               <div className="relative h-64 w-64 flex flex-col justify-center items-center border-1 hover:border-2 hover:shadow-md">
@@ -53,13 +53,9 @@ const page = () => {
                         price: cycle.rent,
                       },
                     }}
+                    className="bg-blue-900 text-white px-3 py-1"
                   >
-                    <button
-                      type="submit"
-                      className="bg-blue-900 text-white px-3 py-1"
-                    >
-                      Book Now
-                    </button>
+                    Book Now
                   </Link>
                 </div>
               </div>
@@ -68,7 +64,7 @@ const page = () => {
         </div>
 
         {/* second row*/}
-        <div className="flex flex-row justify-evenly">
+        <div className="flex sm:flex-col flex-row justify-evenly">
           {second.map((cycle) => (
             <div className="flex flex-col" key={cycle.name}>
               <div className="relative h-64 w-64 flex flex-col justify-center items-center border-1 hover:border-2 hover:shadow-md">
@@ -109,13 +105,9 @@ const page = () => {
                         price: cycle.rent,
                       },
                     }}
+                    className="bg-blue-900 text-white px-3 py-1"
                   >
-                    <button
-                      type="submit"
-                      className="bg-blue-900 text-white px-3 py-1"
-                    >
-                      Book Now
-                    </button>
+                    Book Now
                   </Link>
                 </div>
               </div>
@@ -123,7 +115,7 @@ const page = () => {
           ))}
         </div>
         {/* third row */}
-        <div className="flex flex-row justify-evenly">
+        <div className="flex sm:flex-col flex-row justify-evenly">
           {third.map((cycle) => (
             <div className="flex flex-col" key={cycle.name}>
               <div className="relative h-64 w-64 flex flex-col justify-center items-center border-1 hover:border-2 hover:shadow-md">
@@ -164,13 +156,9 @@ const page = () => {
                         price: cycle.rent,
                       },
                     }}
+                    className="bg-blue-900 text-white px-3 py-1"
                   >
-                    <button
-                      type="submit"
-                      className="bg-blue-900 text-white px-3 py-1"
-                    >
-                      Book Now
-                    </button>
+                    Book Now
                   </Link>
                 </div>
               </div>

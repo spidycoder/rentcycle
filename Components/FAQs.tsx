@@ -5,7 +5,7 @@ const FAQs = () => {
     <div>
       <div className="flex flex-col justify-center items-center mt-14">
         <h1 className="text-4xl font-bold">Top FAQs</h1>
-        <p className="text-2xl">
+        <p className="text-2xl sm:pl-2">
           Renting a Cycle should be Easy, Like our FAQs.
         </p>
       </div>

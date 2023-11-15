@@ -1,10 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import {Fade} from 'react-awesome-reveal';
-import { mainPage1, mainPage2, mainPage3 } from "@/public";
+import { mainPage1, cycle1, mainPage3 } from "@/public";
 import Image from "next/image";
 
-const images = [mainPage1, mainPage2, mainPage3];
+const images = [mainPage1, cycle1, mainPage3];
 const text: [string, string][] = [
   ["Self Ride Bike Rentals", "Now Start at ₹10/hour"],
   ["Long term Rentals", "Choose from monthly and annual plan"],
@@ -34,10 +33,10 @@ const MainPage = () => {
             className="z-0 object-cover h-full w-full"
           />
           <div className="absolute top-1/2 left-1/2 text-center z-10 transform -translate-x-1/2 -translate-y-1/2">
-            <h1 className="text-white font-black text-5xl mb-3">
+            <h1 className="text-white font-black sm:text-3xl text-5xl mb-3">
               {text[currentIndex1][0]}
             </h1>
-            <p className="text-white font-black text-2xl">
+            <p className="text-white font-black sm:text-lg text-2xl">
               {text[currentIndex1][1]}
             </p>
           </div>

@@ -35,7 +35,7 @@ const Footer = () => {
             SOLUTIONS FOR BUSINESSES WHO ARE INTO LAST MILE DELIVERY THROUGH TWO
             WHEELERS.
           </h1>
-          <div className="flex flex-row gap-4 mt-4">
+          <div className="flex sm:flex-wrap flex-row gap-4 mt-4">
             <Image src={facebook} alt="facebook" height={44} width={44} />
             <Image src={twitter} alt="twitter" height={44} width={44} />
             <Image src={instagram} alt="instagram" height={44} width={44} />
