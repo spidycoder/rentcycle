@@ -12,11 +12,11 @@ const page = ({
     price: number;
     location: string;
     totalTime: number;
-    TotalPrice: number;
+    value: number;
   };
 }) => {
   const router = useRouter();
-  const priceForStripe = searchParams.TotalPrice * 100;
+  const priceForStripe = searchParams.value;
   const publishableKey = process.env
     .NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string;
 
@@ -65,7 +65,7 @@ const page = ({
             label="Pay with Card"
             name="CCL"
             currency="INR"
-            description={`Your total Price for Ride is ₹${searchParams.TotalPrice}`}
+            description={`Your total Price for Ride is ₹${priceForStripe}`}
             amount={priceForStripe}
             panelLabel="Pay Now"
             token={onToken}
