@@ -12,11 +12,13 @@ import {
 const Features = () => {
   return (
     <div>
-      <div className="flex flex-row justify-evenly mt-4">
+      <div className="flex flex-row sm:flex-wrap justify-evenly mt-4">
         <Image
           src={playstore}
           alt="playstore"
-          className="object-contain w-12 h-12 cursor-pointer"
+          // className="object-contain cursor-pointer"
+          height={44}
+          width={44}
         />
         <h1 className="text-2xl font-black mt-2 text-slate-600 cursor-pointer hover:text-amber-800">
           CCl Rental App
@@ -24,7 +26,9 @@ const Features = () => {
         <Image
           src={apple}
           alt="applestore"
-          className="object-contain w-14 h-14 cursor-pointer"
+          height={44}
+          width={44}
+          // className="object-contain  cursor-pointer"
         />
       </div>
       <div className="flex sm:p-4 flex-col mt-8 mb-12 text-slate-600 justify-center items-center">
@@ -39,7 +43,9 @@ const Features = () => {
           <Image
             src={safeRide}
             alt="saferide-logo"
-            className="objext-cover h-20 w-20 mt-4 mb-4"
+            className="objext-cover mt-4 mb-4"
+            height={144}
+            width={144}
           />
           <p className="leading-6 p-4 flex items-center self-center">
             Your safety is our priority. From sanitizing all bikes before every
@@ -51,7 +57,9 @@ const Features = () => {
           <Image
             src={owner}
             alt="saferide-logo"
-            className="objext-cover h-20 w-20 mt-4 mb-4"
+            className="objext-cover mt-4 mb-4"
+            height={144}
+            width={144}
           />
           <p className="leading-6 p-4">
             Enjoy the freedom of owning a two-wheeler without the hefty
@@ -63,7 +71,9 @@ const Features = () => {
           <Image
             src={smartMobility}
             alt="saferide-logo"
-            className="objext-cover h-20 w-20 mt-4 mb-4"
+            className="objext-cover mt-4 mb-4"
+            height={144}
+            width={144}
           />
           <p className="leading-6 p-4">
             With your trusty CCL app, you can choose any cycle, make instant
@@ -75,7 +85,9 @@ const Features = () => {
           <Image
             src={station}
             alt="saferide-logo"
-            className="objext-cover h-20 w-20 mt-4 mb-4"
+            className="objext-cover mt-4 mb-4"
+            height={144}
+            width={144}
           />
           <p className="leading-6 p-4">
             Your local ONN Station is here to make ensure your two-wheeler
