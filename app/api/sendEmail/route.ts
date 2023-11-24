@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import { NikeReceiptEmail } from "../../../components/email-template";
+import { NikeReceiptEmail } from "../../../Components/email-template";
 export async function POST(req: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
   const { email, searchParams } = await req.json();
