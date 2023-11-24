@@ -5,11 +5,11 @@ const FAQs = () => {
     <div>
       <div className="flex flex-col justify-center items-center mt-14">
         <h1 className="text-4xl font-bold">Top FAQs</h1>
-        <p className="text-2xl sm:pl-2">
+        <p className="text-2xl sm:text-center">
           Renting a Cycle should be Easy, Like our FAQs.
         </p>
       </div>
-      <div>
+      <div className="sm:px-2">
         <div className="border-2 rounded-md shadow-md m-5 p-5">
           <h1 className="font-bold text-xl">How do I pay?</h1>
           <p className="text-md">

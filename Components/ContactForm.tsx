@@ -110,7 +110,7 @@ export default function ContactForm() {
     <div>
       <div className="flex flex-col mt-8 mb-12 text-slate-600 justify-center items-center">
         <h1 className="text-3xl font-semibold">Contact Us</h1>
-        <p className="text-xl sm:pl-2">
+        <p className="text-xl sm:text-center">
           Any Cycle Renting Issue? Feel Free to Contact us.
         </p>
       </div>
@@ -228,7 +228,7 @@ export default function ContactForm() {
           />
           <button
             type="submit"
-            className="border-2 bg-blue-500 text-white rounded-md pt-2 pb-2 pl-4 pr-4"
+            className="border-2 bg-blue-500 text-white rounded-md pt-2 pb-2 pl-4 pr-4 sm:px-4 sm:py-2"
             onClick={handleSubmit}
           >
             Submit

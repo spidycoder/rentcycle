@@ -47,7 +47,7 @@ const Features = () => {
             height={144}
             width={144}
           />
-          <p className="leading-6 p-4 flex items-center self-center">
+          <p className="leading-6 sm:p-3 p-4 flex items-center self-center">
             Your safety is our priority. From sanitizing all bikes before every
             use, to extensive on-ground safety measures, your rides with ONN
             will always be safe and reliable. We also offer helmets on-demand.
@@ -61,7 +61,7 @@ const Features = () => {
             height={144}
             width={144}
           />
-          <p className="leading-6 p-4">
+          <p className="leading-6 sm:p-3 p-4">
             Enjoy the freedom of owning a two-wheeler without the hefty
             down-payments, EMIs and paperwork. Now choose from rent-to-own,
             monthly/quarterly bookings, and even daily plans.
@@ -75,7 +75,7 @@ const Features = () => {
             height={144}
             width={144}
           />
-          <p className="leading-6 p-4">
+          <p className="leading-6 sm:p-3 p-4">
             With your trusty CCL app, you can choose any cycle, make instant
             payments, get offers, and manage all aspect of your CCL experience
             right from the comfort and ease of your mobile app.
@@ -89,7 +89,7 @@ const Features = () => {
             height={144}
             width={144}
           />
-          <p className="leading-6 p-4">
+          <p className="leading-6 sm:p-3 p-4">
             Your local ONN Station is here to make ensure your two-wheeler
             experience is flawless. At your neighborhood station, you get to
             pick any bike, get maintenance, sanitized, and a lot more.

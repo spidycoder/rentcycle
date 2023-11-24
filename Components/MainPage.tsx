@@ -26,21 +26,24 @@ const MainPage = () => {
 
   return (
     <div>
-        <div className="relative h-screen w-screen">
-          <Image
-            src={images[currentIndex]}
-            alt="image"
-            className="z-0 object-cover h-full w-full"
-          />
-          <div className="absolute top-1/2 left-1/2 text-center z-10 transform -translate-x-1/2 -translate-y-1/2">
-            <h1 className="text-white font-black sm:text-3xl text-5xl mb-3">
-              {text[currentIndex1][0]}
-            </h1>
-            <p className="text-white font-black sm:text-lg text-2xl">
-              {text[currentIndex1][1]}
-            </p>
-          </div>
+      <div className="relative h-screen w-screen sm:relative sm:h-screen sm:w-screen">
+        <Image
+          src={images[currentIndex]}
+          alt="image"
+          className="z-0 object-cover h-full w-full"
+        />
+        <div
+          className="absolute top-1/2 left-1/2 sm:absolute sm:top-1/2 sm:left-1/2 text-center sm:z-10 z-10 transform -translate-x-1/2 -translate-y-1/2 sm:transform sm:-translate-x-1/2 sm:-translate-y-1/2
+          "
+        >
+          <h1 className="text-white font-black sm:text-3xl text-5xl mb-3">
+            {text[currentIndex1][0]}
+          </h1>
+          <p className="text-white font-black sm:text-lg text-2xl">
+            {text[currentIndex1][1]}
+          </p>
         </div>
+      </div>
     </div>
   );
 };

@@ -4,10 +4,10 @@ import { top1, top2, top3, top4, top5 } from "@/public";
 
 const TopCycles = () => {
   return (
-    <div className="bg-slate-300 pb-8">
-      <div className="pt-5 mb-5 flex justify-center items-center">
+    <div className="bg-slate-300 pb-8 sm:bg-slate-300 sm:pb-8">
+      <div className="pt-5 mb-5 flex justify-center items-center sm:mb-2">
         <h1 className="text-black font-semibold text-2xl">
-          Popular Cycles for Rent:
+          Popular Cycles for Rent
         </h1>
       </div>
       <div className="flex sm:flex-col sm:items-center flex-row justify-evenly gap-3 pl-2 pr-2">
