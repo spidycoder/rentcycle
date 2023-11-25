@@ -8,6 +8,9 @@ import bcrypt from "bcryptjs";
 import { NextResponse } from "next/server";
 
 export const options: NextAuthOptions = {
+  pages:{
+    signIn: '/signin'
+  },
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_ID as string,
@@ -53,6 +56,7 @@ export const options: NextAuthOptions = {
     }),
   ],
   callbacks: {
+    
     async signIn({
       user,
       account,
